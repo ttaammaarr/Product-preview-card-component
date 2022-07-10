@@ -1,0 +1,154 @@
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cream);
+  padding: 2rem 1rem;
+  font-family: 'montserrat';
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--white);
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+section {
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'fraunces';
+  font-size: 2rem;
+  color: var(--very-dark-blue);
+  margin-bottom: 1.2rem;
+  line-height: 1em;
+}
+
+
+p {
+  color: var(--dark-grayish-blue);
+  line-height: 1.7em;
+}
+
+.tagline {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  margin-bottom: 1rem;
+}
+
+.new-price {
+  color: var(--dark-cyan);
+  font-family: 'fraunces';
+  font-size: 2rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  margin-left: 1rem;
+}
+
+.img-desktop {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 1.2rem 0;
+}
+
+button {
+  background: var(--dark-cyan);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+button:hover {
+  background: hsl(158, 36%, 21%);
+  cursor: pointer;
+}
+
+button p {
+  color: var(--white);
+  font-weight: 700;
+  font-family: 'montserrat';
+  font-size: 1rem;
+}
+
+.cart-icon {
+  width: 1.2em;
+  margin-right: 0.8rem;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  margin-top: 1rem; 
+}
+    
+.attribution a { 
+  color: var(--dark-cyan); 
+}
+
+
+
+@media screen and (min-width: 550px) {
+
+  main {
+    max-width: 660px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buy-container {
+    margin-top: auto;
+  }
+
+  .img-mobile {
+    display: none;
+  }
+
+  .img-desktop {
+    display: inline;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
